@@ -1,4 +1,4 @@
-
+@echo off
 set "downloads_folder=%USERPROFILE%\Downloads"
 
 
@@ -43,4 +43,3 @@ if exist output.py (
 
 )
 
-pause
